@@ -1,0 +1,169 @@
+ <ion-view title="Fund Transfer">
+	  <ion-nav-buttons side="left">
+				<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+		</ion-nav-buttons>
+	
+        <ion-content has-header="true" padding="true">
+		
+		
+		<div class="list"> 
+  
+		
+			  
+			    <div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+							<span class="input-label"> Source A/c</span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                <label class="item-input-wrapper input-textfield-custom item item-input item-select" style="width:100%">
+				<select ng-model="fundtransfer.item" ng-change="update(fundtransfer)">
+				  <option value="" ng-selected="selected">{{fundtransfer.selectSourceAccount}}</option>
+						<option ng-repeat="x in accountListDescription" >{{x.sAccountDescription}}</option>
+				</select>
+			</label>          
+				</div>
+			  </div>
+			
+			
+		  
+		  
+				  <div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+							<span class="input-label">Account Title </span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                 <label class="item-input-wrapper input-textfield-custom">                  
+                   <input type="text"  id="txtFundTransferAccountTitle" value={{accountTitle}} readonly />
+                  </label>            
+				</div>
+			  </div>
+			  
+			
+				  <div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+							<span class="input-label">Balance </span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                 <label class="item-input-wrapper input-textfield-custom">                  
+                   <input type="text" value={{availableBalance}} readonly>
+                  </label>            
+				</div>
+			  </div>
+		  
+		    <div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+							<span class="input-label">Currency </span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                 <label class="item-input-wrapper input-textfield-custom">                  
+                   <input type="text"  value={{currencyCode}} readonly>
+                  </label>            
+				</div>
+			  </div>
+			
+	
+		
+			  
+				<div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+							<span class="input-label">Amount </span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                 <label class="item-input-wrapper input-textfield-custom">                  
+				   <input type="number" ng-model="fundtransfer.amount">
+                  </label>            
+				</div>
+			  </div>
+		
+		
+			
+			
+			  
+			  	  
+			    <div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+							<span class="input-label">Destination A/c </span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                <label class="item-input-wrapper input-textfield-custom item item-input item-select" style="width:100%">
+					<select ng-model="fundtransfer.destitionItem" ng-change="DestinationUpdate(fundtransfer)">
+				 <option value="" ng-selected="selected">{{fundtransfer.selectSourceAccount}}</option>
+				  <option ng-repeat="y in destrinationaAccountListNodes">{{y.sDestrinationAccountNo}}</option>
+				</select>
+			</label>          
+				</div>
+			  </div>
+			
+			
+		
+			
+				<div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+							<span class="input-label">Account Title </span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                 <label class="item-input-wrapper input-textfield-custom">                  
+					<input type="text" value={{destinationAccountTitle}} readonly>
+                  </label>            
+				</div>
+			  </div>
+		
+		
+			
+		  
+		  	<div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+							<span class="input-label">Currency </span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                 <label class="item-input-wrapper input-textfield-custom">                  
+					<input type="text"  value={{destinationCurrency}} readonly>
+                  </label>            
+				</div>
+			  </div>
+		
+		  
+		
+			<div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+							<span class="input-label">Remarks </span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                 <label class="item-input-wrapper input-textfield-custom">                  
+					<input type="text" ng-model="fundtransfer.remarks" >
+                  </label>            
+				</div>
+			  </div>
+		  
+		  
+		  
+				
+		
+			
+				
+			
+		  	<div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+							<span class="input-label">OTP </span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                 <label class="item-input-wrapper input-textfield-custom">                  
+					<input type="password" ng-model="fundtransfer.pinCode" >
+                  </label>            
+				</div>
+			  </div>		
+			
+		 
+		 	
+			  <div class="item item-input-inset button-margin-from-inputfield border-background-for_label-inputfield"> 
+				<div class="label-width-first">						
+				</div>
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width" >                                 
+            <button  class="button button-block button-calm" ng-click="DoSubmitAction(fundtransfer)" style="width:100%;">
+			 Submit
+			</button>                    
+            </div>
+			  </div>  
+		</div>
+        </ion-content>
+      </ion-view>

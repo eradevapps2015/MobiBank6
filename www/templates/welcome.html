@@ -1,0 +1,86 @@
+ <ion-view title="Welcome">
+			  <ion-nav-buttons side="left">
+				<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+			  </ion-nav-buttons>
+			  <ion-content class="has-header">
+			  <!--
+				 <div class="list">  
+			   
+					
+					<a href="#/app/accBalance" class="button button-block button-positive " style=" width: 80%;margin-left:10%;margin-right:10%;margin-top:10px;">A/c Balance</a>
+					<a href="#/app/accStatement" class="button button-block button-positive" style=" width: 80%;margin-left:10%;margin-right:10%;margin-top:10px;">A/c Statement</a>
+					<a href="#/app/fundTranster" class="button button-block button-positive" style=" width: 80%;margin-left:10%;margin-right:10%;margin-top:10px;">Fund Transfer</a>
+					<a href="#/app/fundTransterRequest" class="button button-block button-positive" style=" width: 80%;margin-left:10%;margin-right:10%;margin-top:10px;">Standing Ins.</a>
+					<a href="#/app/talkTimeRecharge" class="button button-block button-positive" style=" width: 80%;margin-left:10%;margin-right:10%;margin-top:10px;">Talk Time Recharge</a>
+					<a href="#/app/btnStopChequeLeaf" class="button button-block button-positive" style=" width: 80%;margin-left:10%;margin-right:10%;margin-top:10px;">Stop Cheque Leaf</a>
+					<a href="#/app/chequeStatusInquiry" class="button button-block button-positive" style=" width: 80%;margin-left:10%;margin-right:10%;margin-top:10px;">Cheque Status Inquiry</a>
+					
+						
+					  </div>
+					  -->
+					  <p class="input-label-welcome-message">{{welcomeErrorMessage}}</p>
+					<div class="row">
+					<div class="col">
+					  <button   ng-click="btnAccountBalance()" class="button icon-left ion btnBlockHome button-stable">
+						<i class="ionSize ion-briefcase"></i><br>A/c Balance
+					  </button>
+					</div>
+					<div class="col">
+					  <button ng-click="btnAccountStatement()"  class="button icon-left ion btnBlockHome button-stable">
+						<i class="ionSize ion-document-text"></i><br>A/c Statement
+						
+					  </button>
+					</div>
+				  </div>
+				  <div class="row">
+					<div class="col">
+					  <button  ng-click="btnFundTransfer()" class="button icon-left ion btnBlockHome button-stable">
+						<i class="ionSize ion-forward"></i><br>Fund Transfer
+						</button>
+					</div>
+					<div class="col">
+					  <button ng-click="btnFundTransferRequest()" class="button icon-left ion btnBlockHome button-stable">
+						<i class="ionSize ion-share"></i><br>Standing Ins.
+					  </button>
+					</div>
+				  </div>
+				  	  <div class="row">
+					<div class="col">
+					  <button  ng-click="btnTopUp()" class="button icon-left ion btnBlockHome button-stable">
+						<i class="ionSize ion-iphone"></i><br>Top Up
+						</button>
+					</div>
+					<div class="col">
+					  <button ng-click="btnStopChequeLeaf()" class="button icon-left ion btnBlockHome button-stable">
+						<i class="ionSize ion-minus-circled"></i><br>Stop Cheque
+						
+					  </button>
+					</div>
+				  </div>
+				  
+				    <div class="row">
+					<div class="col">
+					  <button ng-click="btnStopChequeStatusInquiry()" class="button icon-left ion btnBlockHome button-stable">
+						<i class="ionSize ion-search"></i><br>Cheque Status
+					  </button>
+					</div>
+					<div class="col">
+					  <button ng-click="btnElecticityBillPay()" class="button icon-left ion btnBlockHome button-stable">
+						<i class="ionSize ion-lightbulb"></i><br>Desco Bill
+					  </button>
+					</div>
+					</div>
+					   <div class="row">
+					<div class="col">
+					  <button ng-click="btnWasaBill()" class="button icon-left ion btnBlockHome button-stable">
+						<i class="ionSize ion-pull-request"></i><br>Wasa Bill
+					  </button>
+					</div>
+					<div class="col">
+					  <button ng-click="btnProfile()" class="button icon-left ion btnBlockHome button-stable">
+						<i class="ionSize ion-person-stalker"></i><br>Profile
+					  </button>
+					</div>
+				  </div>
+			  </ion-content>
+			</ion-view>

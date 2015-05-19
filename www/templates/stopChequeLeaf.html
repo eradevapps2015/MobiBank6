@@ -1,0 +1,100 @@
+ <ion-view title="Stop Cheque Leaf">
+				<ion-nav-buttons side="left">
+				<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+			  </ion-nav-buttons>
+        <ion-content has-header="true" padding="true">
+        
+
+		<div class="list">
+	
+			  
+			  		     <div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+								<span style="padding-left:0" class="input-label"> Account No. </span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+				<label class="item-input-wrapper input-textfield-custom item item-input item-select" style="width:100%">
+					<select ng-model="stopChequeLeaf.item" ng-change="update(stopChequeLeaf)">
+						  <option value="" ng-selected="selected">-Select One-</option>
+								<option ng-repeat="x in stopChequeAccountListNodes" >{{x.accountNum}}</option>
+						</select>
+				</label>          
+				</div>
+			  </div>
+			
+			  
+	
+		  
+			  <div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+									<span class="input-label">Account Title </span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                 <label class="item-input-wrapper input-textfield-custom">                  
+					<input type="text"  id="txtFundTransferAccountTitle" value={{accountTitleselectByAccount}} readonly />
+                  </label>            
+				</div>
+			  </div>
+		
+			
+			  
+			  		     <div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+								<span style="padding-left:0" class="input-label"> Leaves </span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+				<label class="item-input-wrapper input-textfield-custom item item-input item-select" style="width:100%">
+					<select ng-model="stopChequeLeaf.selectedleaf" ng-change="getChequeNumberSelectByLeaves(stopChequeLeaf)">
+				  <option value="" ng-selected="selected">-Select One-</option>
+							<option ng-repeat="x in stopChequeLeavesListNodes" >{{x.chequeDescription}}</option>
+				</select>
+				</label>          
+				</div>
+			  </div>
+			  
+		
+			   
+			  		     <div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+									<span style="padding-left:0" class="input-label"> Reason </span>	
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+				<label class="item-input-wrapper input-textfield-custom item item-input item-select" style="width:100%">
+				<select ng-model="stopChequeLeaf.selectedReason" ng-change="getChequeResonCode(stopChequeLeaf)">
+				  <option value="" ng-selected="selected">-Select One-</option>
+							<option ng-repeat="x in stopChequeResaonListNodes" >{{x.resonDescription}}</option>
+				</select>
+				</label>          
+				</div>
+			  </div>
+		
+	
+		  
+		    <div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+								<span class="input-label">Pin Code</span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                 <label class="item-input-wrapper input-textfield-custom">                  
+					<input type="password" ng-model="stopChequeLeaf.pinCode"   >
+                  </label>            
+				</div>
+			  </div>
+			  
+			
+			
+			 
+			 	  <div class="item item-input-inset border-background-for_label-inputfield"> 
+				<div class="label-width-first">						
+				</div>
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width" >                                 
+            	<button class="button button-block button-calm"  style="width:100%" ng-click="btnExecution(stopChequeLeaf)" >
+				 Submit
+				</button>               
+            </div>
+			  </div>  
+
+		
+          </div>
+        </ion-content>
+      </ion-view>

@@ -1,0 +1,187 @@
+  <ion-view title="Cheque Status Inquiry">
+	 <ion-nav-buttons side="left">
+				<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+			  </ion-nav-buttons>
+        <ion-content has-header="true" padding="true">
+        
+
+		<div class="list">
+	
+		
+			  
+			    
+			  	<div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+									<span style="padding-left:0" class="input-label"> Account No. </span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+				<label class="item-input-wrapper input-textfield-custom item item-input item-select" style="width:100%">
+					<select ng-model="sa.item" ng-change="update(sa)">
+				  <option value="" ng-selected="selected">{{chequeInquiry.selectSelectOption}}</option>
+						<option ng-repeat="x in stopChequeAccountListNodes" >{{x.accountNum}}</option>
+				</select>
+				</label>          
+				</div>
+			  </div>
+			  
+	
+		  
+		        <div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+							<span class="input-label">Account Title </span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                 <label class="item-input-wrapper input-textfield-custom">                  
+					 <input type="text"  id="txtFundTransferAccountTitle" value={{accountTitleselectByAccount}} ng-readonly="true" />
+                  </label>            
+				</div>
+			  </div>
+		
+			
+			  
+	
+			  
+			   	<div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+									<span style="padding-left:0" class="input-label"> Leaf Type </span>		
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+				<label class="item-input-wrapper input-textfield-custom item item-input item-select" style="width:100%">
+						
+				<select ng-model="lt.item" ng-change="getInquiryLeafTypCode(lt)">
+				  <option value="" ng-selected="selected">{{chequeInquiry.selectSelectOption}}</option>
+							<option ng-repeat="x in chqueStatusInquiryTypNodes" >{{x.accountDescription}}</option>
+				</select>
+				</label>          
+				</div>
+			  </div>
+		
+			
+	
+		  
+		  
+		        <div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+							<span class="input-label">From Date </span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                 <label class="item-input-wrapper input-textfield-custom">                  
+					 <input type="date" ng-model="chequeInquiry.chFromDate"  />
+                  </label>            
+				</div>
+			  </div>
+		  
+	
+		  
+		   <div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+								<span class="input-label">To date</span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                 <label class="item-input-wrapper input-textfield-custom">                  
+					 <input type="date" ng-model="chequeInquiry.chToDate" />
+                  </label>            
+				</div>
+			  </div>
+			
+	
+			 
+			   <div class="item item-input-inset border-background-for_label-inputfield"> 
+				<div class="label-width-first">						
+				</div>
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width" >                                 
+			<button  class="button button-block button-calm"  style="width:100%" ng-click="btnChequeStatusInquiryExecution(chequeInquiry)" >
+				 Submit
+				</button>          
+            </div>
+			  </div>  
+		</div>
+
+		<!--
+          <div >
+		   <style>
+				table, th , td  {
+				  border: 1px solid grey;
+				  border-collapse: collapse;
+				  padding: 5px;
+				}
+				table tr:nth-child(odd)	{
+				  background-color: #f1f1f1;
+				}
+				table tr:nth-child(even) {
+				  background-color: #ffffff;
+				}
+				</style>
+				<ion-scroll zooming="true" direction="xy" style="width: 500px ; height:500px; margin-top:20px">	
+				<div style="width: 5000px; height: 5000px;">				
+                 <table class="fixed_headers">
+				  <thead>
+					<tr>
+					<th>SL</th>						
+					  <th>Statsu Date</th>					 
+					  <th>Leaf No</th>	 
+					  <th>Leaf Type</th>
+						<th>Transaction Date</th>	
+						<th>Transaction Type</th>					 
+						<th>Amount</th>	 
+						<th>Account No</th>
+						<th>Account Type</th>
+						<th>Account Title</th>							
+					 
+					</tr>
+					</thead>
+					
+					  <tr ng-repeat="x in chequeStatusViewListNodes" >
+						<td>{{x.slNo }}</td>
+						<td>{{ x.issuDate }}</td>
+						<td>{{ x.leafNo }}</td>	
+						<td>{{x.leafType }}</td>
+						<td>{{x.transactionDate }}</td>
+						<td>{{ x.transactionType }}</td>
+						<td>{{ x.amount }}</td>	
+						<td>{{x.accountNumber }}</td>
+						<td>{{ x.accountType }}</td>
+						<td>{{ x.accountTitle }}</td>	
+						
+											
+					  </tr>
+					</table>
+					</div>
+			</ion-scroll>	
+				</div>
+				-->
+				
+				<ion-scroll direction="x" style="width: 100%" scrollbar-x="false" delegate-handle="head" zooming="true" on-scroll="scrollMirror('head', 'list')">
+         <div class="item item-header item-positive row row-item ch-in-width-area">
+          <div class="col col-center ch-in-slno" >SL</div>
+          <div class="col col-center ch-in-date">Statsu Date</div>
+          <div class="col col-right ch-in-date" >Leaf No</div>
+          <div class="col col-center ch-in-date">Status</div>
+		   <div class="col col-center ch-in-date"> Transaction Date</div>
+		    <div class="col col-center ch-in-date"> Transaction Type</div>
+			<div class="col col-center ch-in-date"> Amount</div>
+			<div class="col col-center ch-in-date"> Account No</div>			
+			<div class="col col-center ch-in-type"> Account Type</div>
+			<div class="col col-center ch-in-account-title">Account Title</div>     
+	  
+        </div>
+      </ion-scroll>
+	  
+	  	  <ion-scroll direction="xy" style="height: 100%" zooming="true" on-scroll="scrollMirror('list', 'head')" delegate-handle="list"  >
+        <div class="item row row-item ch-in-width-area" ng-repeat="x in chequeStatusViewListNodes" ng-class-odd="'odd'" ng-class-even="'even'">
+          <div class="col col-center col-sep  ch-in-slno">{{x.slNo}}</div>
+          <div class="col col-center col-sep  ch-in-date">{{x.issuDate}}</div>
+          <div class="col col-right col-sep ch-in-date">{{ x.leafNo}}</div>
+          <div class="col col-center col-sep  ch-in-date">{{x.leafType  }}</div>		  
+		   <div class="col col-center col-sep ch-in-date">{{x.transactionDate }}</div>
+          <div class="col col-center col-sep  ch-in-date">{{x.transactionType}}</div>
+          <div class="col col-right col-sep ch-in-date">{{  x.amount}}</div>
+          <div class="col col-center col-sep  ch-in-date">{{x.accountNumber  }}</div>
+			<div class="col col-center col-sep ch-in-type">{{ x.accountType }}</div>
+          <div class="col col-center col-sep  ch-in-account-title">{{x.accountTitle}}</div>
+        </div>
+     
+
+      </ion-scroll>
+        </ion-content>
+      </ion-view>

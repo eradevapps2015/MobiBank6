@@ -1,0 +1,159 @@
+
+      <ion-view title="Talk Time Recharge">
+		<ion-nav-buttons side="left">
+				<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+			  </ion-nav-buttons>
+        <ion-content has-header="true" padding="true">
+        <div class="list">
+			
+		
+			
+		     <div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+								<span class="input-label"> Source A/c </span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                <label class="item-input-wrapper input-textfield-custom item item-input item-select" style="width:100%">
+			<select ng-model="talkTime.item" ng-change="update(talkTime)">
+				  <option value="" ng-selected="selected">{{talkTime.selectSelectOption}}</option>
+						<option ng-repeat="x in accountListDescription" >{{x.sAccountDescription}}</option>
+				</select>
+			</label>          
+				</div>
+			  </div>
+		    
+		   <div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+							<span class="input-label">Account Title </span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                 <label class="item-input-wrapper input-textfield-custom">                  
+               <input type="text"  id="txtFundTransferAccountTitle" value={{accountTitle}} readonly />
+                  </label>            
+				</div>
+			  </div>
+			
+			
+	
+		  
+		    <div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+								<span class="input-label">Balance </span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                 <label class="item-input-wrapper input-textfield-custom">                  
+               <input type="text" value={{availableBalance}} readonly>
+                  </label>            
+				</div>
+			  </div>
+
+			  <div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+								<span class="input-label">Currency </span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                 <label class="item-input-wrapper input-textfield-custom">                  
+              <input type="text"  value={{currencyCode}} readonly >
+                  </label>            
+				</div>
+			  </div>
+				
+			 
+		
+			
+				     <div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+								<span class="input-label"> Operator </span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                <label class="item-input-wrapper input-textfield-custom item item-input item-select" style="width:100%">
+			<select ng-model="talkTime.operator" ng-change="updateMoileOperator(talkTime)">
+				  <option value=""  selected="selected">{{talkTime.selectSelectOption}}</option>
+				  <option ng-repeat="x in mobileOperatorsNamesAndCodesNodes">{{x.mobileOperatorName}}</option>
+				</select>
+			</label>          
+				</div>
+			  </div>
+			  
+			
+			
+			<!--  
+			  <label class="item item-input border-background-for_label-inputfield">
+			<span class="input-label">Mobile Type</span>
+			 <label class="input-label_radiobutton">
+			<ion-radio  id="mobileTypeRadio" ng-click="radioSubmit('PRE')"  >PrePaid</ion-radio>
+			<ion-radio  id="mobileTypeRadio"  ng-click="radioSubmit('PST')" >Post Paid</ion-radio>
+			</label>
+		  </label>-->
+
+					<div class="item item-input-inset border-background-for_label-inputfield">		
+							<div class="label-width-first border-background-for_label-inputfield">
+										<span class="input-label">Mobile Type </span>
+										</div>	
+											<div class="list input-label-inputfiled11 input-filed-width border-background-for_label-inputfield">
+									  <ion-radio ng-repeat="item in radioGroupCheckvalue"
+							   ng-value="item.value"
+							   ng-model="talkTime.radiovalue"
+							   ng-click="getSelectRadioButtonValue(item)"
+							class="" >
+					  {{ item.text }}
+					</ion-radio>
+					</div>
+					  </div>		  
+		
+		  
+		  	  <div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+								<span class="input-label">Mobile No. </span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                 <label class="item-input-wrapper input-textfield-custom">                  
+             <input type="tel" ng-model="talkTime.mobileNo"  >
+                  </label>            
+				</div>
+			  </div>
+
+		
+		  	  <div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+								<span class="input-label">Amount</span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                 <label class="item-input-wrapper input-textfield-custom">                  
+           <input type="number" ng-model="talkTime.amount" >
+                  </label>            
+				</div>
+			  </div>
+
+		  
+		  
+		  	  <div class="item item-input-inset border-background-for_label-inputfield">		
+					<div class="label-width-first">
+								<span class="input-label">Pin Code</span>
+					</div>				
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
+                 <label class="item-input-wrapper input-textfield-custom">                  
+          	<input type="password" ng-model="talkTime.pinCode"   >
+                  </label>            
+				</div>
+			  </div>
+			
+		 	
+			 			
+			
+		 
+		  <div class="item item-input-inset border-background-for_label-inputfield"> 
+				<div class="label-width-first">						
+				</div>
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width" >                                 
+            		<button class="button button-block button-calm"  style="width:100%" ng-click="DoSubmitAction(talkTime)" >
+			 Submit
+			</button>                  
+            </div>
+			  </div>  
+			
+			
+          </div>
+        </ion-content>
+      </ion-view>
+    
