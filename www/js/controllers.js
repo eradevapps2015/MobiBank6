@@ -3249,6 +3249,21 @@ $scope.update = function(sa) {
 										
 										 $ionicLoading.hide();
 									if(data.electricityBillExecuteNodes[0].errorCode == 0) {
+											$scope.descoAccountTitle = '';
+							$scope.descoAvailableBalance = '';
+							$scope.descoCurrencyCode1 = '';	
+							desco.billNo='';							
+							$scope.customerAccount = '';
+							$scope.customerName = '';
+							$scope.meterNo = '';
+							$scope.monthBill = '';
+							$scope.dueDate = '';							
+							$scope.billAmount ='';
+							$scope.vat = '';
+							$scope.totalAmount = '';
+							$scope.sourceAccount=null;
+							 $scope.fundtransfer = { selectSourceAccount: "-Select One-" };
+							 desco.pineCode='';
 									$ionicLoading.hide();										
 										$ionicPopup.alert({
 											title:data.electricityBillExecuteNodes[0].errorMessage,
@@ -3276,6 +3291,28 @@ $scope.update = function(sa) {
 			}
 		
 		}
+		
+		
+		$scope.$on('$ionicView.beforeLeave', function(desco){
+							
+							
+							$scope.descoAccountTitle = '';
+							$scope.descoAvailableBalance = '';
+							$scope.descoCurrencyCode1 = '';	
+							desco.billNo='';							
+							$scope.customerAccount = '';
+							$scope.customerName = '';
+							$scope.meterNo = '';
+							$scope.monthBill = '';
+							$scope.dueDate = '';							
+							$scope.billAmount ='';
+							$scope.vat = '';
+							$scope.totalAmount = '';
+							$scope.sourceAccount=null;
+							 $scope.fundtransfer = { selectSourceAccount: "-Select One-" };
+							 desco.pineCode='';
+							
+			 });
 		
 		
 })
