@@ -22,7 +22,7 @@ angular.module('starter.controllers', [])
                     
                 }
             }
-      /*      
+           
      //Begin For sqlite**********************************
     db = window.sqlitePlugin.openDatabase({name: "DB"});
 
@@ -76,7 +76,7 @@ db.transaction(function(tx) {
 
       });
     //End sqlite**********************************************************
-    */
+    
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
     }
