@@ -143,7 +143,7 @@ document.addEventListener("deviceready", function() {
  */
  
 	// *****End Show User ID**********
-  	//$rootScope.getServerIp='http://202.40.190.14:8084/'  //For Test
+  	$rootScope.getServerIp='http://202.40.190.14:8084/'  //For Test
 	//$rootScope.getServerIp='http://localhost:8084/'  //For Own Pc
 
 
