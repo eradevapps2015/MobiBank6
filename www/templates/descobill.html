@@ -4,9 +4,9 @@
 		</ion-nav-buttons>
 	
         <ion-content has-header="true" padding="true">
-		<div class="list "> 
 		
-  
+		
+  <div class="list">
 		
 			  
 			    <div class="item item-input-inset border-background-for_label-inputfield">		
@@ -53,14 +53,16 @@
 					<div class="label-width-first">
 							<span class="input-label">Bill No </span>
 					</div>				
-				<div class="item item-input-inset input-label-inputfiled11 input-filed-width2">
+				<div class="item item-input-inset input-label-inputfiled11 input-filed-width">
                  <label class="item-input-wrapper input-textfield-custom">                  
 					<input type="text" ng-model="desco.billNo" >
-                  </label>            
+                  </label>  
+
+					<div class="btn-seach_button">
+				<a class="button button-outline icon-right ion-search button-balanced btn-seach_button" ng-click="btnSearch(desco)"></a>
 				</div>
-				<div class="btn-seach_button">
-				<a class="button button-outline icon-right ion-search button-balanced" ng-click="btnSearch(desco)"></a>
 				</div>
+				
 			  </div>
 		  
 				  <div class="item item-input-inset border-background-for_label-inputfield">		
@@ -162,6 +164,7 @@
 			</button>                    
             </div>
 			  </div>  
+		
 		</div>
         </ion-content>
       </ion-view>
