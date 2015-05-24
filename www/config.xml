@@ -18,8 +18,10 @@ xmlns:gap = "http://phonegap.com/ns/1.0">
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="BackupWebStorage" value="none"/>
+  
   <preference name="orientation" value="portrait" />
- <gap:splash src="img/splash_screen2.png" />
+  
+ <!--<gap:splash src="img/splash_screen2.png" />-->
 
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
