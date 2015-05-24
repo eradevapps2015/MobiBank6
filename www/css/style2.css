@@ -496,3 +496,25 @@ white-space: normal;
 	 }
 
 /*Use Media */
+.input-filed-width2{
+ width:45% !important;
+ 
+}
+
+.btn-seach_button{
+ 
+ height: 34px;
+ margin-left:5px;
+  
+ 
+ 
+}
+
+button .icon::before, .button.icon::before, .button.icon-left::before, .button.icon-right::before {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 25px;
+    padding: 0 0 1px;
+    pointer-events: none;
+    vertical-align: inherit;
+}
