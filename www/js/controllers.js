@@ -608,7 +608,7 @@ $scope.listItems=[];
                  	  	branch_address: res.rows.item(i).branch_address,
                  	  	phone: res.rows.item(i).phone,
                  		 fax: res.rows.item(i).fax,
-                 		 logitude: res.rows.item(i).logitude
+                 		 logitude: res.rows.item(i).logitude,
                  		 latitude: res.rows.item(i).latitude
                  	
                  		 
@@ -749,7 +749,7 @@ $scope.listItems=[];
   
   //End snc
   
-  /*  
+  
   $scope.branchCode2=function(category){
  
  // $rootScope.branchMapLongitude=item.logitude;
@@ -762,7 +762,7 @@ $scope.listItems=[];
  //  $scope.$apply();
   
   }
-*/
+
  /* 
   $scope.branchCode=function(item){
   alert(item.logitude);
