@@ -607,7 +607,11 @@ $scope.listItems=[];
                  	  	branch_name: res.rows.item(i).branch_name,
                  	  	branch_address: res.rows.item(i).branch_address,
                  	  	phone: res.rows.item(i).phone,
-                 		 fax: res.rows.item(i).fax
+                 		 fax: res.rows.item(i).fax,
+                 		 logitude: res.rows.item(i).logitude
+                 		 latitude: res.rows.item(i).latitude
+                 	
+                 		 
                  	  });
                  	  // Make sure to apply scope change so that ng-repeat updates
         		$scope.$apply();
@@ -745,17 +749,19 @@ $scope.listItems=[];
   
   //End snc
   
-  $scope.branchCode=function(item){
+    
+  $scope.branchCode2=function(item){
  
-  $rootScope.branchMapLongitude=item.logitude;
-   $rootScope.branchMapLatitude=item.latitude;
+ // $rootScope.branchMapLongitude=item.logitude;
+   //$rootScope.branchMapLatitude=item.latitude;
    $rootScope.branchMapBranchName=item.branchName;
    //branchName
    alert($rootScope.branchMapBranchName);
-    alert($rootScope.branchMapLongitude);
+  //  alert($rootScope.branchMapLongitude);
  //  $scope.$apply();
   
   }
+
  /* 
   $scope.branchCode=function(item){
   alert(item.logitude);
