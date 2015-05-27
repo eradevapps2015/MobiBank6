@@ -749,7 +749,7 @@ $scope.listItems=[];
   
   //End snc
   
-    
+  /*  
   $scope.branchCode2=function(category){
  
  // $rootScope.branchMapLongitude=item.logitude;
@@ -762,7 +762,7 @@ $scope.listItems=[];
  //  $scope.$apply();
   
   }
-
+*/
  /* 
   $scope.branchCode=function(item){
   alert(item.logitude);
