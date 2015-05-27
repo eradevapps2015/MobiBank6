@@ -746,9 +746,20 @@ $scope.listItems=[];
   //End snc
   
   $scope.branchCode=function(item){
+ 
+  $rootScope.branchMapLongitude=item.logitude;
+   $rootScope.branchMapLatitude=item.latitude;
+   $rootScope.branchMapBranchName=item.branchName;
+   //branchName
+   alert($rootScope.branchMapLongitude);
+ //  $scope.$apply();
+  
+  }
+ /* 
+  $scope.branchCode=function(item){
   alert(item.logitude);
   }
-
+*/
   
   $scope.branches = [ { 
 	branch: '1.Principal Office Branch',
