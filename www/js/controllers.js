@@ -751,7 +751,8 @@ $scope.listItems=[];
    $rootScope.branchMapLatitude=item.latitude;
    $rootScope.branchMapBranchName=item.branchName;
    //branchName
-   alert($rootScope.branchMapLongitude);
+   alert($rootScope.branchMapBranchName);
+    alert($rootScope.branchMapLongitude);
  //  $scope.$apply();
   
   }
