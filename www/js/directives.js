@@ -1,12 +1,7 @@
 angular.module('starter.directives', [])
 
-
-.directive('map', function($rootScope) {
-
-
-//alert($rootScope.branchMapLongitude);
-
-var myCenter=new google.maps.LatLng( $rootScope.branchMapLatitude , $rootScope.branchMapLongitude);
+.directive('map', function() {
+var myCenter=new google.maps.LatLng(23.730182 , 90.408583);
   return {
     restrict: 'E',
     scope: {
@@ -14,39 +9,50 @@ var myCenter=new google.maps.LatLng( $rootScope.branchMapLatitude , $rootScope.b
     },
     link: function ($scope, $element, $attr) {
       function initialize() {
-	 // $scope.$apply();
         var mapOptions = {
           center:myCenter,
           zoom:16,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };	
 		
-       //var map = new google.maps.Map($element[0], mapOptions);		
-		var map = new google.maps.Map($element[0],  mapOptions);		
+       //var map = new google.maps.Map($element[0], mapOptions);
+		
+		var map = new google.maps.Map($element[0],  mapOptions);
+		
+		
 		 var marker = new google.maps.Marker({
       position: myCenter,
       map: map,
-      title:   $rootScope.branchMapBranchName
+      title: 'ERA InfoTech Limited'
     });
-	
-  //$scope.mm=map;
+
+   
+		
+		
+     
+	 
+		
+		
+
         // Stop the side bar from dragging when mousedown/tapdown on the map
         google.maps.event.addDomListener(marker,$element[0], 'mousedown', function (e) {
           e.preventDefault();
           return false;
-        });			
-		   $scope.onCreate({map: map});		
+        });
+		
+		
+		   $scope.onCreate({map: map});
+
+		
       }
+
       if (document.readyState === "complete") {
         initialize();
-      } else {	 
-	 
-        //google.maps.event.addDomListener(window, 'load', initialize);	
-		google.maps.event.addDomListener(window, 'load', initialize);
-		initialize();		
-      }	
+      } else {
+        google.maps.event.addDomListener(window, 'load', initialize);
+      }
+	  
+	
     }
   }
-
-
 });
