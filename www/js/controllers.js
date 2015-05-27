@@ -750,14 +750,15 @@ $scope.listItems=[];
   //End snc
   
     
-  $scope.branchCode2=function(item){
+  $scope.branchCode2=function(category){
  
  // $rootScope.branchMapLongitude=item.logitude;
    //$rootScope.branchMapLatitude=item.latitude;
-   $rootScope.branchMapBranchName=item.branchName;
+   $rootScope.branchMapBranchName=category.branchName;
+   $rootScope.branchMapLatitude=category.latitude;
    //branchName
    alert($rootScope.branchMapBranchName);
-  //  alert($rootScope.branchMapLongitude);
+  alert( $rootScope.branchMapLatitude);
  //  $scope.$apply();
   
   }
