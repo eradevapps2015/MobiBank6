@@ -86,7 +86,7 @@
         <div class="item row row-item ac-width-area" ng-repeat="x in orig.accountBalanceNodes " ng-class-odd="'odd'" ng-class-even="'even'">
           <div class="col col-center col-sep  ac-slno">{{ x.slno }}</div>
           <div class="col col-center col-sep  ac-number">{{ x.accountNum}}</div>
-          <div class="col col-right col-sep  ac-balance"><p style="text-align:left">{{x.currencyCode}}</p>&nbsp;&nbsp;{{ x.availableBalance }}</div>
+          <div class="col col-right col-sep  ac-balance"><div><div style="float:left">{{x.currencyCode}}</div>&nbsp;&nbsp;<div style="float:right">{{ x.availableBalance }}</div></div></h4></div>
           <div class="col col-center col-sep  ac-type">{{x.accountType }}</div>
       
         </div>
