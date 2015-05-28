@@ -22,7 +22,9 @@ xmlns:gap = "http://phonegap.com/ns/1.0">
     <preference name="target-device"              value="universal" />    
     <preference name="fullscreen"                 value="true" />  
  
-  <preference name="orientation" value="portrait" />
+ <!-- <preference name="orientation" value="portrait" />-->
+   <preference name="orientation" value="landscape" />
+  
   
  <gap:splash src="img/splash_screen2.png" />
 
