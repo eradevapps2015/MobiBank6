@@ -566,6 +566,8 @@ $scope.listItems=[];
 //ng-click="branchLocationLatLng(category)"
   $scope.branchLocationLatLng = function(category) {
   	alert("branch name :"+category.branch_name);
+  		alert("Lat  :"+category.latitude);
+  			alert("Lng:"+category.logitude);
   }
 /*End LatLng*/
 
