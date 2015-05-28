@@ -16,7 +16,7 @@
 <!--Begin  href="#/tab/locations/" -->
 
 <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="category in branChcategories | filter:input.searchInput" type="item-text-wrap" ng-click="branchLocationLatLng(category)" href="#/tab/locations/"  ng-class-odd="'odd'" ng-class-even="'even'">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="category in branChcategories | filter:input.searchInput" type="item-text-wrap" ng-click="branchLocationLatLng(category)"   ng-class-odd="'odd'" ng-class-even="'even'">
        
         <h2>&nbsp; {{category.slno}}.&nbsp;&nbsp;{{category.branch_name}}</h2>
 		<h2>Addr.:&nbsp;{{category.branch_address}}</h2>
