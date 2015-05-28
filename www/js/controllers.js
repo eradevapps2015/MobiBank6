@@ -58,8 +58,11 @@ db.transaction(function(tx) {
                  	  	branch_code: res.rows.item(i).branch_code,
                  	  	branch_name: res.rows.item(i).branch_name,
                  	  	branch_address: res.rows.item(i).branch_address,
+                 	  	 logitude: res.rows.item(i).logitude,
+                 		 latitude: res.rows.item(i).latitude,
                  	  	phone: res.rows.item(i).phone,
                  		 fax: res.rows.item(i).fax
+                 		
                  	  });
                  	  // Make sure to apply scope change so that ng-repeat updates
         		$scope.$apply();
@@ -616,10 +619,11 @@ $scope.listItems=[];
                  	  	branch_code: res.rows.item(i).branch_code,
                  	  	branch_name: res.rows.item(i).branch_name,
                  	  	branch_address: res.rows.item(i).branch_address,
+                 	  		 logitude: res.rows.item(i).logitude,
+                 		 latitude: res.rows.item(i).latitude,
                  	  	phone: res.rows.item(i).phone,
-                 		 fax: res.rows.item(i).fax,
-                 		 logitude: res.rows.item(i).logitude,
-                 		 latitude: res.rows.item(i).latitude
+                 		 fax: res.rows.item(i).fax
+                 	
                  	
                  		 
                  	  });
