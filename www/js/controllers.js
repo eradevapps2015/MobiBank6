@@ -58,7 +58,7 @@ db.transaction(function(tx) {
                  	  	branch_code: res.rows.item(i).branch_code,
                  	  	branch_name: res.rows.item(i).branch_name,
                  	  	branch_address: res.rows.item(i).branch_address,
-                 	  	 logitude: res.rows.item(i).logitude,
+                 	  	 longitude: res.rows.item(i).longitude,
                  		 latitude: res.rows.item(i).latitude,
                  	  	phone: res.rows.item(i).phone,
                  		 fax: res.rows.item(i).fax
@@ -570,7 +570,7 @@ $scope.listItems=[];
   $scope.branchLocationLatLng = function(category) {
   	alert("branch name :"+category.branch_name);
   		alert("Lat  :"+category.latitude);
-  			alert("Lng:"+category.logitude);
+  			alert("Lng:"+category.longitude);
   }
 /*End LatLng*/
 
@@ -619,7 +619,7 @@ $scope.listItems=[];
                  	  	branch_code: res.rows.item(i).branch_code,
                  	  	branch_name: res.rows.item(i).branch_name,
                  	  	branch_address: res.rows.item(i).branch_address,
-                 	  		 logitude: res.rows.item(i).logitude,
+                 	  		 longitude: res.rows.item(i).longitude,
                  		 latitude: res.rows.item(i).latitude,
                  	  	phone: res.rows.item(i).phone,
                  		 fax: res.rows.item(i).fax
