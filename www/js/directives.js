@@ -1,7 +1,10 @@
 angular.module('starter.directives', [])
 
 .directive('map', function() {
-var myCenter=new google.maps.LatLng(23.730182 , 90.408583);
+	//	$rootScope.derectiveBranchLat=category.latitude;
+  	//$rootScope.derectiveBranchLng=category.longitude;
+  	var myCenter=new google.maps.LatLng($rootScope.derectiveBranchLat , $rootScope.derectiveBranchLng);
+//var myCenter=new google.maps.LatLng(23.730182 , 90.408583);
   return {
     restrict: 'E',
     scope: {
