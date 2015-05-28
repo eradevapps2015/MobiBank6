@@ -563,7 +563,10 @@ document.addEventListener("deviceready", function() {
 $scope.branchLocationsData='';
 $scope.listItems=[];
 /*Begin Latlng*/
-ng-click="branchLocationLatLng(category)"
+//ng-click="branchLocationLatLng(category)"
+  $scope.branchLocationLatLng = function(category) {
+  	alert("branch name :"+category.branch_name);
+  }
 /*End LatLng*/
 
 
