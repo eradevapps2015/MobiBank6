@@ -568,9 +568,12 @@ $scope.listItems=[];
 /*Begin Latlng*/
 //ng-click="branchLocationLatLng(category)"
   $scope.branchLocationLatLng = function(category) {
-  	alert("branch name :"+category.branch_name);
-  		alert("Lat  :"+category.latitude);
-  			alert("Lng:"+category.longitude);
+  //	alert("branch name :"+category.branch_name);
+  	//	alert("Lat  :"+category.latitude);
+  		//	alert("Lng:"+category.longitude);
+  	$rootScope.derectiveBranchLat=category.latitude;
+  	$rootScope.derectiveBranchLng=category.longitude;
+  			
   }
 /*End LatLng*/
 
