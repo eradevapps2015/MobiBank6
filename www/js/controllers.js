@@ -737,14 +737,14 @@ $scope.listItems=[];
         		$scope.$apply();
                  	//$scope.categories.push({slno: res.rows.item(i).slno, branch_name: res.rows.item(i).branch_name});
                  	 }
-                 	 	
+                 	 $ionicLoading.hide();	
                  	 }
                  })
             });
         
 			//End Branch Location
 				  
-				  $ionicLoading.hide();
+			
 			
         }).error(function(data, status, headers, config) {
 			 $ionicLoading.hide();
