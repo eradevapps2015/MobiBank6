@@ -1456,8 +1456,14 @@ $scope.update = function(sa) {
 						  //template:'To date'
 						  })
 					}else{
-						//alert("succcc");
-						$ionicLoading.show({
+					//Begin dialog
+				  var confirmPopup = $ionicPopup.confirm({
+					     title: 'If You Confirm Press OK',
+					     template: 'Destination A/C : '+$scope.destinationAccount+'. '+'Amount : '+fundtransfer.amount
+					   });
+					   confirmPopup.then(function(res) {
+					     if(res) {
+					       	$ionicLoading.show({
 							template: 'Please Wait..'
 						});
 						$http({
@@ -1514,6 +1520,14 @@ $scope.update = function(sa) {
 									$timeout(function() {
 							 $ionicLoading.hide();
 						   }, 3000);
+					     } else {
+					       //console.log('You are not sure');
+					     }
+					   });
+					//End dialog
+					
+						//alert("succcc");
+					
 					}
 				}
 			// ****************End Fund Transfer End Submit Execution***************
@@ -1766,8 +1780,15 @@ $scope.update = function(sa) {
 						  //template:'To date'
 						  })
 					}else{
-						//alert("succcc");
-						$ionicLoading.show({
+					//Begin dialog
+					 var confirmPopup = $ionicPopup.confirm({
+						     title: 'If You Confirm Press OK',
+						     template: 'Destination A/C :'+$scope.destinationAccount+'. '+'Amount :'+fundtransfer.amount
+						   });
+						   confirmPopup.then(function(res) {
+						     if(res) {
+						      // console.log('You are sure');
+						      	$ionicLoading.show({
 							template: 'Please Wait..'
 						});
 						 var requestDate = $filter('date')(new Date(fundtransfer.requestDate), 'dd/MM/yyyy');
@@ -1825,7 +1846,14 @@ $scope.update = function(sa) {
 						$timeout(function() {
 						 $ionicLoading.hide();
 					   }, 3000);
-						 
+						
+						     } else {
+						       //console.log('You are not sure');
+						     }
+						   });
+					//End dialog
+						//alert("succcc");
+					 
 					}
 				}
 			// ****************End Fund Transfer End Submit Execution***************
@@ -2027,7 +2055,15 @@ $scope.update = function(sa) {
 						  //template:'To date'
 				})
 			}else {
-					$ionicLoading.show({
+				
+			//Begin Dialog
+			  var confirmPopup = $ionicPopup.confirm({
+				     title: 'If You Confirm Press OK',
+				     template: 'Mobile Numer :'+talkTime.mobileNo+'. '+'Amount :'+talkTime.amount
+				   });
+				   confirmPopup.then(function(res) {
+				     if(res) {
+				      	$ionicLoading.show({
 						template: 'Please Wait..'
 					});
 											
@@ -2084,7 +2120,13 @@ $scope.update = function(sa) {
 						}); 
 				$timeout(function() {
 				 $ionicLoading.hide();
-			   }, 3000);	
+			   }, 3000);
+				     } else {
+				      // console.log('You are not sure');
+				     }
+				   });
+			//End dialog
+					
 			}
 			
 		}
