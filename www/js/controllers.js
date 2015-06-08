@@ -1456,8 +1456,14 @@ $scope.update = function(sa) {
 						  //template:'To date'
 						  })
 					}else{
-						//alert("succcc");
-						$ionicLoading.show({
+					//Begin dialog
+				  var confirmPopup = $ionicPopup.confirm({
+					     title: 'If You Confirm Press OK',
+					     template: 'Destination A/C : '+$scope.destinationAccount+'. '+'Amount : '+fundtransfer.amount
+					   });
+					   confirmPopup.then(function(res) {
+					     if(res) {
+					       	$ionicLoading.show({
 							template: 'Please Wait..'
 						});
 						$http({
@@ -1514,6 +1520,14 @@ $scope.update = function(sa) {
 									$timeout(function() {
 							 $ionicLoading.hide();
 						   }, 3000);
+					     } else {
+					       //console.log('You are not sure');
+					     }
+					   });
+					//End dialog
+					
+						//alert("succcc");
+					
 					}
 				}
 			// ****************End Fund Transfer End Submit Execution***************
